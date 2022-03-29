@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import TodoList from './TodoList';
 import React,{useState} from 'react';
+import { ThingsProvider } from './ThingsContext';
 
 function App() {
  const [isClicked, setIsClicked] = useState(false)
@@ -11,7 +12,10 @@ function App() {
         setIsClicked(true);
       
       }}>CLICK TO EDIT</button>
-      <TodoList isClicked = {isClicked}/>
+      <ThingsProvider value={isClicked}>
+      <TodoList />
+      </ThingsProvider>
+     
     </div>
   );
 }

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import ThingsContext from "./ThingsContext";
 
-const TodoItem = ({ name, isClicked }) => {
+const TodoItem = ({ name }) => {
   return (
     <li>
-      {name}
-      {isClicked.toString()}
+      {name} {useContext(ThingsContext).toString()}
     </li>
   );
 };

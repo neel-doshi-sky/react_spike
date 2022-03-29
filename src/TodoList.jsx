@@ -1,11 +1,11 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-const TodoList = ({ isClicked }) => {
+const TodoList = () => {
   return (
     <ul>
-      <TodoItem name={"Task 1"} isClicked={isClicked} />
-      <TodoItem name={"Task 2"} isClicked={isClicked} />
+      <TodoItem name={"Task 1"} />
+      <TodoItem name={"Task 2"} />
     </ul>
   );
 };
